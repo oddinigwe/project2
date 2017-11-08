@@ -25,6 +25,8 @@ Oddinigwe Onyemenem - oddinigwe@gmail.com
 
 This dataset contains 80 various brands of cereal and the nutritional facts of each of them from major cereal brand manufacturers. 
 
+![GitHub Logo](different-cereals.png)
+
 ## Content
 
 ### Fields in the dataset:
