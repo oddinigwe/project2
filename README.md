@@ -77,4 +77,4 @@ cups: number of cups in one serving
 
 rating: a rating of the cereals (Possibly from Consumer Reports?)
 
-## INPUTS AND OUTPUTS
+## INPUTS AND OUTPUTS...
