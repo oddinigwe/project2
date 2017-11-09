@@ -77,4 +77,50 @@ cups: number of cups in one serving
 
 rating: a rating of the cereals (Possibly from Consumer Reports?)
 
-## INPUTS AND OUTPUTS...
+## INPUTS AND OUTPUTS
+
+```
+#to enable visualizations 
+%matplotlib inline
+
+# First, import pandas, a useful data analysis tool especially when working with labeled data
+import pandas as pd
+
+# import seaborn, visualization library in python 
+import warnings # current version of seaborn generates a bunch of warnings that we'll ignore
+warnings.filterwarnings("ignore")
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.set(style="white", color_codes=True)
+
+# Next, we'll load the cereal dataset, which is in the specified directory below
+cereal = pd.read_csv("C:\\Users\\oddin\\Desktop\\cereal_project\\cereal.csv")
+
+# Next, display the first 20 rows and all columns of the iris dataframe, good way to see the colum headings for the dataset
+cereal.head(20)
+```
+```
+# to count the frequency of values for each cereal brand manufacturer in the dataset
+cereal["manufacturer"].value_counts()
+
+Output:
+Kelloggs         23
+General Mills    22
+Post Foods        9
+Quaker            8
+Ralston           8
+Nabisco           6
+Name: manufacturer, dtype: int64
+```
+```
+#To create a bar chart showing the various cereal brands on the x-axis and calories on the y-axis
+fig,ax = plt.subplots(figsize=(10,10))
+cereal['manufacturer'].value_counts(sort=False).plot(kind='bar',color = 'blue')
+plt.title('Brand Manufacturers and Calorie Counts',fontsize=20)
+plt.xlabel('manufacturer',fontsize=20)
+plt.ylabel('calories',fontsize=20)
+```
+![GitHub Logo](output1.png)
+
+```
+
