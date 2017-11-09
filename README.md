@@ -123,4 +123,55 @@ plt.ylabel('calories',fontsize=20)
 ![GitHub Logo](output1.png)
 
 ```
+#To create a bar chart showing the various cereal brands on the x-axis and sodium on the y-axis
+fig,ax = plt.subplots(figsize=(10,10))
+cereal['manufacturer'].value_counts(sort=False).plot(kind='bar',color = 'blue')
+plt.title('Brand Manufacturers and Sodium Quantity',fontsize=20)
+plt.xlabel('manufacturer',fontsize=20)
+plt.ylabel('sodium',fontsize=20)
+```
+![GitHub Logo](output2.png)
 
+```
+#To create a pie chart showing cereal manufacturers and ratings
+fig,ax = plt.subplots(figsize=(12,12))
+cereal['manufacturer'].value_counts(sort=False).plot(kind='pie')
+plt.title('Manufacturer and Rating',fontsize=20)
+plt.xlabel('manufacturer',fontsize=16)
+plt.ylabel('rating',fontsize=16)
+```
+![GitHub Logo](output3.png)
+
+```
+# A good way to complement the boxplot is by using the Seaborn's striplot
+# Use jitter=True so that all the points are not represented(clustered) on the same axis,
+#this allows the data to be properly represented
+# Saving the resulting axes as ax each time causes the resulting plot to be shown
+# on top of the previous axes
+# added size to make the change the size of the dots i.e. bigger or smaller
+# changed edge color
+ax = sns.boxplot(x="manufacturer", y="calories", data=cereal)
+ax = sns.stripplot(x="manufacturer", y="calories", data=cereal, jitter=True, size = 12, edgecolor="black")
+```
+![GitHub Logo](output4.png)
+
+```
+# To create a kdeplot which is a seaborn plot useful for looking at univariate relations 
+# Creates and visualizes a kernel density estimate of the underlying feature
+
+sns.FacetGrid(cereal, hue="manufacturer", size=6) \
+   .map(sns.kdeplot, "rating")\
+   .add_legend()
+```
+![GitHub Logo](output5.png)   
+
+```
+# A violin plot combines the benefits of the previous two plots and simplifies them
+# Violin plot, unlike box plots, depict the density of the data
+# Denser regions of the data are fatter, and sparser thiner in a violin plot
+# further showing the distributions of the features i.e. petallength
+sns.violinplot(x="manufacturer", y="sodium", data=cereal, size=10)
+```
+![GitHub Logo](output6.png)
+
+```
