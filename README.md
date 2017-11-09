@@ -104,7 +104,13 @@ cereal.head(20)
 # to count the frequency of values for each cereal brand manufacturer in the dataset
 cereal["manufacturer"].value_counts()
 ```
-![GitHub Logo](counts1.png)
+Kelloggs         23
+General Mills    22
+Post Foods        9
+Quaker            8
+Ralston           8
+Nabisco           6
+Name: manufacturer, dtype: int64
 
 ```
 #To create a bar chart showing the various cereal brands on the x-axis and calories on the y-axis
