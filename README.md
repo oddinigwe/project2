@@ -172,6 +172,6 @@ sns.FacetGrid(cereal, hue="manufacturer", size=6) \
 # further showing the distributions of the features i.e. petallength
 sns.violinplot(x="manufacturer", y="sodium", data=cereal, size=10)
 ```
-![GitHub Logo](output6.png)
+![GitHub Logo](output_6.png)
 
 ```
