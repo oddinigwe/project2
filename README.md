@@ -25,6 +25,8 @@ Oddinigwe Onyemenem - oddinigwe@gmail.com
 
 This dataset contains 80 various brands of cereal and the nutritional facts of each of them from major cereal brand manufacturers. 
 
+![GitHub Logo](cerealpic.png)
+
 ## Content
 
 ### Fields in the dataset:
@@ -35,17 +37,17 @@ Name: Name of cereal
 
 Manufacturer: Manufacturer of cereal
 
-G = General Mills
+General Mills
 
-K = Kelloggs
+Kelloggs
 
-N = Nabisco
+Nabisco
 
-P = Post
+Post Foods
 
-Q = Quaker Oats
+Quaker Oats
 
-R = Ralston Purina
+Ralston Purina
 
 type: cold or hot
 
@@ -75,4 +77,4 @@ cups: number of cups in one serving
 
 rating: a rating of the cereals (Possibly from Consumer Reports?)
 
-## INPUTS AND OUTPUTS
+## INPUTS AND OUTPUTS...
