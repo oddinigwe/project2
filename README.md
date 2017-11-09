@@ -166,10 +166,9 @@ sns.FacetGrid(cereal, hue="manufacturer", size=6) \
 ![GitHub Logo](output5.png)   
 
 ```
-# A violin plot combines the benefits of the previous two plots and simplifies them
 # Violin plot, unlike box plots, depict the density of the data
 # Denser regions of the data are fatter, and sparser thiner in a violin plot
-# further showing the distributions of the features i.e. petallength
+# further showing the distributions of the features 
 sns.violinplot(x="manufacturer", y="sodium", data=cereal, size=10)
 ```
 ![GitHub Logo](/output6.png)
