@@ -98,11 +98,13 @@ cereal = pd.read_csv("C:\\Users\\oddin\\Desktop\\cereal_project\\cereal.csv")
 
 # Next, display the first 20 rows and all columns of the iris dataframe, good way to see the colum headings for the dataset
 cereal.head(20)
+```
 
+```
 # to count the frequency of values for each cereal brand manufacturer in the dataset
 cereal["manufacturer"].value_counts()
 ```
-![GitHub Logo](counts.png)
+![GitHub Logo](counts1.png)
 
 ```
 #To create a bar chart showing the various cereal brands on the x-axis and calories on the y-axis
